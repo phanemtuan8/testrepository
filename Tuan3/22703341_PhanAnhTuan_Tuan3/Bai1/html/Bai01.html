@@ -45,7 +45,7 @@
         }
         
         .left {
-            width: 40%;
+            width: 60%;
             float: left;
             color: white;
             padding: 10px;
@@ -57,7 +57,7 @@
         }
         
         .right {
-            width: 50%;
+            width: 40%;
             float: left;
             color: blue;
             padding: 10px;
@@ -114,6 +114,26 @@
             border-top: 5px dotted white;
             padding: 20px 0;
         }
+        
+        .form {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .form-item {
+            width: 400px !important;
+        }
+        
+        .form-item-a {
+            width: 75px;
+        }
+        
+        .form div label {}
+        
+        .item-sex {
+            width: 400px;
+            display: flex;
+        }
     </style>
 </head>
 
@@ -140,56 +160,56 @@
                 </p>
 
                 <table>
-                    <tr>
-                        <td><label for="">Title</label></td>
-                        <td>
-                            <input list="title" placeholder="Mr" />
+                    <div class="form">
+                        <div><label for="">Title</label></div>
+                        <div class="item-sex">
+                            <input class="form-item-a" list="title" placeholder="Mr" />
                             <datalist id="title">
                   <option value="Mr"></option>
                   <option value="Ms"></option>
                   <option value="Mrs"></option>
                 </datalist>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="fn">Full Name*</label></td>
-                        <td>
-                            <input type="text" name="fullName" id="fn" placeholder="First Name" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="maill">Mailing Address</label></td>
-                        <td><input type="text" placeholder="Mailing Address" /></td>
-                    </tr>
-                    <tr>
-                        <td><label for="">City</label></td>
-                        <td><input type="text" placeholder="City" /></td>
-                    </tr>
-                    <tr>
-                        <td><label for="">Country</label></td>
-                        <td><input type="text" placeholder="Country" /></td>
-                    </tr>
-                    <tr>
-                        <td>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div><label for="fn">Full Name*</label></div>
+                        <div>
+                            <input class="form-item" type="text" name="fullName" id="fn" placeholder="First Name" />
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div><label for="maill">Mailing Address</label></div>
+                        <div><input class="form-item" type="text" placeholder="Mailing Address" /></div>
+                    </div>
+                    <div class="form">
+                        <div class="form"><label for="">City</label></div>
+                        <div><input class="form-item" type="text" placeholder="City" /></div>
+                    </div>
+                    <div class="form">
+                        <div><label for="">Country</label></div>
+                        <div><input class="form-item" type="text" placeholder="Country" /></div>
+                    </div>
+                    <div class="form">
+                        <div>
                             <label for="">Specific questions or requests about your tour</label
                 >
-              </td>
-              <td>
+              </div>
+              <div>
                 <textarea
                   name=""
                   id=""
                   rows="5"
-                  placeholder="Specific questions or requests about your tour"
+                  placeholder="Specific questions or requests about your tour" class="form-item"
                 ></textarea>
-              </td>
-            </tr>
-            <tr>
+              </div>
+            </div>
+            <div>
               <td></td>
               <td>
                 <button>Submit</button>
                 <button>Reset</button>
               </td>
-            </tr>
+            </div>
           </table>
         </article>
 
