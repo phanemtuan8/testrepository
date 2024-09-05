@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="22699091_VoThiThuongHoai_Tuan3" content="HTML-CSS nâng cao" />
+    <title>Tuan3_Bai02</title>
+    <style>
+        /* reset CSS */
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            color: #9a9a9a;
+            font-size: 18px;
+        }
+        
+        header {
+            background-color: #294e79;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        header img {
+            height: 150px;
+        }
+        
+        .name {
+            width: 400px;
+            color: white;
+            padding-left: 20px;
+        }
+        
+        .tag {
+            font-weight: bold;
+            font-size: 50px;
+        }
+        
+        .nav {
+            float: right;
+            width: fit-content;
+            margin-top: 20px;
+            margin-right: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        
+        .nav li {
+            display: inline-block;
+            margin-right: 30px;
+            padding: 10px 10px;
+            background-color: #3972b5;
+            font-size: 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .search {
+            width: fit-content;
+            margin-right: 20px;
+        }
+        
+        .search input {
+            background-color: #1e2f4b;
+            color: white;
+            height: 29px;
+            padding: 0 10px;
+        }
+        
+         ::placeholder {
+            color: white;
+            padding-left: 10px;
+        }
+        
+        .search button {
+            background-color: #1e2f4b;
+            color: white;
+            margin-left: 5px;
+            padding: 5px;
+        }
+        
+        .left {
+            width: 70%;
+            float: left;
+            padding: 10px;
+        }
+        
+        .left h1 {
+            border-bottom: 2px dotted black;
+            padding: 10px;
+            font-size: 30px;
+        }
+        
+        .art_left {
+            margin-top: 10px;
+            width: 55%;
+            float: left;
+            padding: 10px;
+        }
+        
+        .art_left p {
+            color: #d39091;
+            text-shadow: 2px 2px 2px #93c386;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        table td {
+            padding: 0px 5px 10px;
+        }
+        
+        table input {
+            margin-top: 5px;
+            width: 100%;
+            height: 30px;
+            background-color: #f7f7f7;
+            border: 1px solid #e3e3e3;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 5px;
+            background-color: #f7f7f7;
+            border: 1px solid #e3e3e3;
+        }
+        
+        button {
+            padding: 5px 8px;
+            background-color: #f7f7f7;
+            border: 1px solid #e3e3e3;
+            margin-right: 10px;
+        }
+        
+        .art_right {
+            margin-top: 10px;
+            width: 45%;
+            float: left;
+            padding: 10px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .menu-items {
+            display: flex;
+            height: auto;
+            white-space: nowrap;
+        }
+        
+        .menu-items li {
+            padding: 0px;
+        }
+        
+        .hour {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .add1 {
+            margin-bottom: 10px;
+        }
+        
+        .right {
+            width: 28%;
+            float: left;
+            background-color: #f8f8f8;
+            margin: 0 1%;
+        }
+        
+        .right h1 {
+            border-bottom: 2px dotted black;
+            padding: 10px;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .right img {
+            padding: 5px;
+            border: 1px solid #e2e2e2;
+            margin-left: 65px;
+            width: 70%;
+        }
+        
+        .right p {
+            padding: 15px;
+        }
+        
+        a {
+            float: right;
+            padding: 10px;
+            color: #5e7383;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        
+        footer {
+            clear: both;
+            padding-left: 20px;
+            color: #516f93;
+            background-color: #193354;
+            height: 30px;
+            line-height: 30px;
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+        }
+        
+        footer>p>span {
+            color: white;
+        }
+        
+        .more-text {
+            color: #193354;
+            font-weight: 800;
+        }
+        
+        .button {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="logo-container">
+                <img src="../images/flower.jpg" alt="logo" />
+                <div class="name">
+                    <p>
+                        <span class="tag">FlowerBox 360</span> <br /> ...to get your daily close of luxury roses!
+                    </p>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search the site..." />
+                    <button>GO</button>
+                </div>
+                <div class="menu">
+                    <ul class="menu-items">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Promotion</a></li>
+                        <li><a href="#">Gift Baskets</a></li>
+                        <li><a href="#">Flowers Services</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </header>
+
+        <section>
+            <article class="left">
+                <h1>Why Not Contact Us Today!</h1>
+
+                <div class="art_left">
+                    <p>
+                        For FlowerBox 360 shoppers, that means not only can you send your friends and loved ones the highest quality flowers found online, but that you can do so at a great value.
+                    </p>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">Name:</label>
+                                <br />
+                                <input type="text" name="fullName" id="fn" />
+                            </td>
+                            <td>
+                                <label for="maill">Email:</label>
+                                <br />
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Telephone:</label>
+                                <br />
+                                <input type="text" />
+                            </td>
+                            <td>
+                                <label for="">Subject:</label>
+                                <br />
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="">Message:</label>
+                                <br />
+                                <textarea name="" id=""></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="button">
+                        <button>Submit</button>
+                        <button>Reset</button>
+                    </div>
+                </div>
+
+                <div class="art_right">
+                    <h1>FlowerBox 360 Info!</h1>
+                    <ul class="hour">
+                        <li>Operating Hours:</li>
+                        <li>Monday-Friday: 9:00am-5:00pm</li>
+                        <li>Saturday: 9:00am-1:00pm.</li>
+                        <li>Sunday: Closed (No Deliveries)</li>
+                        <li>ORDER ONLINE 24/7</li>
+                    </ul>
+
+                    <ul class="add1">
+                        <li>Software Engineering Dept.</li>
+                        <li>Information Technology Faculty</li>
+                        <li>First Floor, H Building</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            12 Nguyen Van Bao, Ward 4, Go Vap District, Ho Chi Minh City
+                        </li>
+                        <li>Tel: 0283.8940 390</li>
+                        <li>Fax: 0283.9940 954</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="right">
+                <h1>Discounts & Specials</h1>
+                <img src="../images/rose.jpg" alt="rose" />
+                <p>
+                    FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes to promo codes and other savings. We also offer military flower discounts to our wonderful troops!
+                </p>
+                <a href="" class="more-text">Read more >></a>
+            </article>
+        </section>
+
+        <footer>
+            <p>
+                <span>2016 Sky World Tours. All rights reserved.</span> Contact information: Student Name | StudentID | Testing Date
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
